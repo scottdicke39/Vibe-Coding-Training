@@ -185,6 +185,27 @@ export default function LandingPage() {
         })}
       </div>
 
+      {/* Idea Generator CTA */}
+      <div className="bg-violet-50 border border-violet-200 rounded-2xl p-6 text-center">
+        <p className="text-violet-800 font-medium mb-1">
+          Not sure what to build?
+        </p>
+        <p className="text-sm text-violet-600 mb-4">
+          The Idea Generator knows our full tool stack and will suggest a project idea
+          with the right tool and a starter prompt you can paste directly into Lovable,
+          ChatGPT, Claude, or Glean.
+        </p>
+        <a
+          href={HACK_DAY_INFO.ideaGeneratorUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium rounded-xl transition-colors"
+        >
+          <Sparkles className="w-4 h-4" />
+          Open Idea Generator
+        </a>
+      </div>
+
       {/* Bottom callout */}
       <div className="bg-brand-50 border border-brand-200 rounded-2xl p-6 text-center">
         <p className="text-brand-800 font-medium mb-1">

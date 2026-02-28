@@ -167,6 +167,22 @@ export default function IdeasPage() {
         </div>
       )}
 
+      <div className="bg-violet-50 border border-violet-200 rounded-2xl p-5 mt-8 text-center">
+        <p className="text-sm text-violet-700 mb-3">
+          Want a custom idea based on your specific workflow? The Idea Generator will suggest
+          a project tailored to your role with a starter prompt you can paste directly into your tool.
+        </p>
+        <a
+          href={HACK_DAY_INFO.ideaGeneratorUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium rounded-xl transition-colors"
+        >
+          <Lightbulb className="w-4 h-4" />
+          Open Idea Generator
+        </a>
+      </div>
+
       <div className="flex justify-between items-center pt-8 border-t border-gray-200 mt-8">
         <Link href="/learn/recipes" className="text-sm text-gray-500 hover:text-brand-600">
           Previous: Recipes

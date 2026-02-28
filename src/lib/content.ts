@@ -325,6 +325,8 @@ export const HACK_DAY_INFO = {
   demoDate: 'March 24, 2026',
   philosophy: 'Get every single person to build something that works. Could be personal or hobby. Bonus if it is work. But build something and publish it.',
   philosophyAttribution: 'Jon Stull',
+  ideaGeneratorUrl: 'https://recruiting-agent-468191624623.us-central1.run.app/vibe-coding/guest/23ecdad3422a7c69d3913fd369ca8368bfd1297ab9e0d5e8',
+  recruitingIqUrl: 'https://recruiting-agent-468191624623.us-central1.run.app',
   accessNotes: {
     chatgpt: 'You should already have access via SSO. Go to Settings > Apps to verify connectors (GitHub, Google Calendar, Linear) are enabled.',
     claude: 'Claude seats are funded at the department level and cost more. Check with your manager if you do not already have access.',
