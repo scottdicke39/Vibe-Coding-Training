@@ -316,7 +316,23 @@ export const HUMOR_CALLOUTS = [
   'The AI will never complain about formatting a table. It will, however, occasionally make up data for the table.',
   'Think of vibe coding like ordering at a restaurant. You describe what you want; the kitchen figures out the recipe.',
   'AI hallucinations are like autocorrect on steroids: confident, fast, and occasionally catastrophic.',
+  'The bar is simple: build one thing and ship it. It does not need to be polished. Just go from zero to one.',
+  'You do not need permission to try. You need permission to deploy to production. Big difference.',
 ];
+
+export const HACK_DAY_INFO = {
+  buildDate: 'March 18, 2026',
+  demoDate: 'March 24, 2026',
+  philosophy: 'Get every single person to build something that works. Could be personal or hobby. Bonus if it is work. But build something and publish it.',
+  philosophyAttribution: 'Jon Stull',
+  accessNotes: {
+    chatgpt: 'You should already have access via SSO. Go to Settings > Apps to verify connectors (GitHub, Google Calendar, Linear) are enabled.',
+    claude: 'Claude seats are funded at the department level and cost more. Check with your manager if you do not already have access.',
+    lovable: 'Lovable Enterprise is being provisioned. Your Team Captain will confirm seat allocation.',
+    glean: 'Available to everyone through your existing Glean login. Navigate to Agent Builder from the sidebar.',
+  },
+  dataWarning: 'P&T works with sensitive information. On hack day, use sample or made-up data only. Do not put real employee info, comp data, or candidate PII into any tool. Lovable apps do not have built-in authentication yet, so be mindful of who can access what you build.',
+};
 
 export const CATEGORIES = [
   'People Operations',

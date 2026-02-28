@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { PROJECT_IDEAS, CATEGORIES, DIFFICULTY_LEVELS } from '@/lib/content';
+import { PROJECT_IDEAS, CATEGORIES, DIFFICULTY_LEVELS, HACK_DAY_INFO } from '@/lib/content';
 import { HumorCallout } from '@/components/HumorCallout';
 import { markViewed } from '@/lib/progress';
-import { ArrowLeft, Search, Lightbulb, Copy, Check } from 'lucide-react';
+import { ArrowLeft, Search, Lightbulb, Copy, Check, AlertTriangle } from 'lucide-react';
 
 export default function IdeasPage() {
   const [categoryFilter, setCategoryFilter] = useState<string>('All');
@@ -60,6 +60,11 @@ export default function IdeasPage() {
         These are starting points, not assignments. Riff on them, combine them, or ignore them
         entirely and do your own thing. The only requirement is that you build something.
       </p>
+
+      <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+        <AlertTriangle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+        <p className="text-sm text-red-700">{HACK_DAY_INFO.dataWarning}</p>
+      </div>
 
       <HumorCallout index={8} className="mb-6" />
 

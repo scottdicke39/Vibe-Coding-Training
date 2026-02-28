@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { HumorCallout } from '@/components/HumorCallout';
 import { getProgress, getCompletionPercentage } from '@/lib/progress';
+import { HACK_DAY_INFO } from '@/lib/content';
 
 const ROLES = [
   { id: 'people-ops', label: 'People Ops', recommended: '/learn/tools/lovable' },
@@ -104,14 +105,19 @@ export default function LandingPage() {
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
           Welcome to Vibe Coding
         </h1>
-        <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-6">
+        <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
           Build real tools without writing a single line of code.
           <br />
           <span className="text-gray-400">(The AI writes it. You tell it what to do.)</span>
         </p>
+        <p className="text-sm text-gray-400 italic max-w-xl mx-auto mb-6">
+          &ldquo;{HACK_DAY_INFO.philosophy}&rdquo;
+          <span className="not-italic"> &ndash; {HACK_DAY_INFO.philosophyAttribution}</span>
+        </p>
         <div className="flex items-center justify-center gap-8 text-sm text-gray-400">
+          <span><strong className="text-gray-600">Hack Day:</strong> {HACK_DAY_INFO.buildDate}</span>
+          <span><strong className="text-gray-600">Demos:</strong> {HACK_DAY_INFO.demoDate}</span>
           <span><strong className="text-gray-600">38</strong> project ideas</span>
-          <span><strong className="text-gray-600">4</strong> tools</span>
           <span><strong className="text-gray-600">0</strong> lines of code required</span>
         </div>
       </div>

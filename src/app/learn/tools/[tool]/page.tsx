@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { TOOLS } from '@/lib/content';
+import { TOOLS, HACK_DAY_INFO } from '@/lib/content';
 import { QUIZZES } from '@/lib/quizzes';
 import { QuizCard } from '@/components/QuizCard';
 import { HumorCallout } from '@/components/HumorCallout';
 import { markViewed, markQuizCompleted } from '@/lib/progress';
-import { ArrowLeft, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ExternalLink, CheckCircle2, Info } from 'lucide-react';
 
 export default function ToolPage() {
   const params = useParams();
@@ -117,6 +117,19 @@ export default function ToolPage() {
           <h3 className="font-bold text-brand-800 mb-1">{tool.keyConcept.title}</h3>
           <p className="text-brand-700 text-sm leading-relaxed">{tool.keyConcept.body}</p>
         </div>
+
+        {/* Access note */}
+        {HACK_DAY_INFO.accessNotes[toolId as keyof typeof HACK_DAY_INFO.accessNotes] && (
+          <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl p-4">
+            <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-medium text-blue-800">Access for Hack Day</p>
+              <p className="text-sm text-blue-700 mt-0.5">
+                {HACK_DAY_INFO.accessNotes[toolId as keyof typeof HACK_DAY_INFO.accessNotes]}
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* CTA */}
         {tool.url && (
